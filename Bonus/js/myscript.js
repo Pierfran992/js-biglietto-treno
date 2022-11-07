@@ -13,20 +13,28 @@ console.log(standardPriceKm);
 // Inserisci il tuo nome
 userName = prompt("Inserisci il tuo Nome");
 
+document.getElementById('ms_user_name').innerHTML = userName;
+
 console.log(userName);
 
 // Inserisci il tuo cognome
 userSecondName = prompt("Inserisci il tuo Cognome");
+
+document.getElementById('ms_user_second_name').innerHTML = userSecondName;
 
 console.log(userSecondName);
 
 // Inserisci il tuo indirizzo
 userAddress = prompt("Inserisci il tuo indirizzo");
 
+document.getElementById('ms_user_address').innerHTML = userAddress;
+
 console.log(userAddress);
 
 // Inserisci il tuo numero di cellulare
 userCell = prompt("inserisci il tuo numero di cellulare");
+
+document.getElementById('ms_user_cell').innerHTML = userCell;
 
 console.log(userCell);
 
