@@ -22,14 +22,10 @@ header, footer {
 
 
 /* main rules */
-main {
+.ms_home_page {
     background-image: url(../img/glacier_express_grisons_switzerland-1920x1080.jpg);
     background-size: cover;
     height: calc(100% - 150px);
-}
-
-main img {
-    width: 100%;
 }
 
 .ms_ticket_info {

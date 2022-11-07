@@ -2,7 +2,9 @@
 
 /*Nota bene il prezzo finale del biglietto non deve contenere più di 2 cifre decimali */
 
-// elenco variabili
+function myFunction() {
+
+    // elenco variabili
 
 let userName, userSecondName, userAddress, userCell, userEta, kmUser, priceTicket;
 
@@ -99,5 +101,8 @@ if ((userEta >= 18) && (userEta <= 65)) {
     console.log(finalPriceTicket);
 
 }
+
+}
+
 
 
