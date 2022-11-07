@@ -21,39 +21,51 @@ console.log(seniorPriceKm);
 // Inserisci la tua età
 userEta = parseInt (prompt("Inserisci la tua età"));
 
+document.getElementById('ms_eta').innerHTML = userEta;
+
 console.log(userEta);
 
 // Inserisci i km che devi percorrere
 kmUser = parseInt (prompt("Inserisci i km che devi percorrere"));
 
+document.getElementById('ms_km').innerHTML = kmUser;
+
 console.log(kmUser);
 
 // Calcolare il prezzo del biglietto in base ai dati inseriti dall'user
 
-    // se l'età dell'user è >= a 18 e <= a 65 allora il prezzo per km è 0.21€/km
-    if ((userEta >= 18) && (userEta <= 65)) {
+// se l'età dell'user è >= a 18 e <= a 65 allora il prezzo per km è 0.21€/km
+if ((userEta >= 18) && (userEta <= 65)) {
 
-        priceTicket = kmUser * standardPriceKm;
+    priceTicket = kmUser * standardPriceKm;
 
-        let finalPriceTicket = priceTicket.toFixed(2)
+    let finalPriceTicket = priceTicket.toFixed(2);
 
-        console.log(finalPriceTicket);
+    document.getElementById('ms_price_ticket').innerHTML = finalPriceTicket + "€";
 
-    } else if (userEta < 18){ // se l'età dell'user è < di 18 allora applica uno sconto del 20%
+    console.log(finalPriceTicket);
 
-        priceTicket = kmUser * youngPriceKm;
+} else if (userEta < 18){ // se l'età dell'user è < di 18 allora applica uno sconto del 20%
 
-        let finalPriceTicket = priceTicket.toFixed(2)
+    priceTicket = kmUser * youngPriceKm;
 
-        console.log(finalPriceTicket);
+    let finalPriceTicket = priceTicket.toFixed(2);
 
+    document.getElementById('ms_price_ticket').innerHTML = finalPriceTicket + "€";
+
+    console.log(finalPriceTicket);
+
+
+} else if (userEta > 65) { // se l'età dell'user è > di 65 allora applica uno sconto del 40%
+
+    priceTicket = kmUser * seniorPriceKm;
+
+    let finalPriceTicket = priceTicket.toFixed(2);
     
-    } else if (userEta > 65) { // se l'età dell'user è > di 65 allora applica uno sconto del 40%
+    document.getElementById('ms_price_ticket').innerHTML = finalPriceTicket + "€";
 
-        priceTicket = kmUser * seniorPriceKm;
+    console.log(finalPriceTicket);
 
-        let finalPriceTicket = priceTicket.toFixed(2)
+}
 
-        console.log(finalPriceTicket);
 
-    }
