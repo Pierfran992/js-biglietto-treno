@@ -4,11 +4,31 @@
 
 // elenco variabili
 
-let userEta, kmUser, priceTicket;
+let userName, userSecondName, userAddress, userCell, userEta, kmUser, priceTicket;
 
 let standardPriceKm = 0.21;
 
 console.log(standardPriceKm);
+
+// Inserisci il tuo nome
+userName = prompt("Inserisci il tuo Nome");
+
+console.log(userName);
+
+// Inserisci il tuo cognome
+userSecondName = prompt("Inserisci il tuo Cognome");
+
+console.log(userSecondName);
+
+// Inserisci il tuo indirizzo
+userAddress = prompt("Inserisci il tuo indirizzo");
+
+console.log(userAddress);
+
+// Inserisci il tuo numero di cellulare
+userCell = prompt("inserisci il tuo numero di cellulare");
+
+console.log(userCell);
 
 // Inserisci la tua età
 userEta = parseInt (prompt("Inserisci la tua età"));
