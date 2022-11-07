@@ -8,6 +8,8 @@ let userEta, kmUser, priceTicket;
 
 let standardPriceKm = 0.21;
 
+console.log(standardPriceKm);
+
 let youngPriceKm = standardPriceKm - (standardPriceKm * 20/100);
 
 console.log(youngPriceKm);
@@ -24,7 +26,6 @@ console.log(userEta);
 // Inserisci i km che devi percorrere
 kmUser = parseInt (prompt("Inserisci i km che devi percorrere"));
 
-
 console.log(kmUser);
 
 // Calcolare il prezzo del biglietto in base ai dati inseriti dall'user
@@ -34,19 +35,25 @@ console.log(kmUser);
 
         priceTicket = kmUser * standardPriceKm;
 
-        console.log(priceTicket);
+        let finalPriceTicket = priceTicket.toFixed(2)
+
+        console.log(finalPriceTicket);
 
     } else if (userEta < 18){ // se l'età dell'user è < di 18 allora applica uno sconto del 20%
 
         priceTicket = kmUser * youngPriceKm;
 
-        console.log(priceTicket);
+        let finalPriceTicket = priceTicket.toFixed(2)
+
+        console.log(finalPriceTicket);
 
     
     } else if (userEta > 65) { // se l'età dell'user è > di 65 allora applica uno sconto del 40%
 
         priceTicket = kmUser * seniorPriceKm;
 
-        console.log(priceTicket);
+        let finalPriceTicket = priceTicket.toFixed(2)
+
+        console.log(finalPriceTicket);
 
     }
