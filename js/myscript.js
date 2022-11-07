@@ -10,14 +10,6 @@ let standardPriceKm = 0.21;
 
 console.log(standardPriceKm);
 
-let youngPriceKm = standardPriceKm - (standardPriceKm * 20/100);
-
-console.log(youngPriceKm);
-
-let seniorPriceKm = standardPriceKm - (standardPriceKm * 40/100);
-
-console.log(seniorPriceKm);
-
 // Inserisci la tua età
 userEta = parseInt (prompt("Inserisci la tua età"));
 
@@ -47,9 +39,15 @@ if ((userEta >= 18) && (userEta <= 65)) {
 
 } else if (userEta < 18){ // se l'età dell'user è < di 18 allora applica uno sconto del 20%
 
-    priceTicket = kmUser * youngPriceKm;
+    priceTicket = kmUser * standardPriceKm;
 
-    let finalPriceTicket = priceTicket.toFixed(2);
+    let youngDiscount = priceTicket * 20/100;
+
+    console.log(youngDiscount);
+
+    let youngFinalPrice = priceTicket - youngDiscount;
+
+    let finalPriceTicket = youngFinalPrice.toFixed(2);
 
     document.getElementById('ms_price_ticket').innerHTML = finalPriceTicket + "€";
 
@@ -58,9 +56,15 @@ if ((userEta >= 18) && (userEta <= 65)) {
 
 } else if (userEta > 65) { // se l'età dell'user è > di 65 allora applica uno sconto del 40%
 
-    priceTicket = kmUser * seniorPriceKm;
+    priceTicket = kmUser * standardPriceKm;
 
-    let finalPriceTicket = priceTicket.toFixed(2);
+    let seniorDiscount = priceTicket * 40/100;
+
+    console.log(seniorDiscount);
+
+    let seniorFinalePrice = priceTicket - seniorDiscount;
+
+    let finalPriceTicket = seniorFinalePrice.toFixed(2);
     
     document.getElementById('ms_price_ticket').innerHTML = finalPriceTicket + "€";
 
